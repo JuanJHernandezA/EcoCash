@@ -1,0 +1,127 @@
+header{
+    background-color: #2d3c67;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    color: #f6f6f6;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a7b2e6;
+    
+}
+
+.container{
+    background-color: #688cca;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: auto;
+    width: 80%;
+    margin: 20px auto;
+
+}
+
+
+#ingresoForm, #egresoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 350px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+#ingresoForm label, #egresoForm label{
+    align-self: flex-start;
+    margin-bottom: 4px;
+}
+
+#ingresoForm input[type="number"],
+#ingresoForm input[type="text"],
+#ingresoForm input[type="date"],
+#egresoForm input[type="number"],
+#egresoForm input[type="text"],
+#egresoForm input[type="date"]
+{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#ingresoForm select,
+#egresoForm select {
+    width: 85%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#categoriaContainer{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#ingresoForm button[type="submit"],
+#egresoForm button[type="submit"] {
+    margin-top: 12px;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 90px;
+    width: 80%;
+    cursor: pointer;
+}
+
+#ingresoForm button[type="submit"]:hover,
+#egresoForm button[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+#agregarCategoria{
+    margin: auto;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    background-color: #47a04a;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 90px;
+    
+    width: 10%;
+    cursor: pointer;
+}
+
+#agregarCategoria:hover{
+    background-color: #388e3c;
+}
+
+.new-option { 
+    display: none; 
+    gap: 10px;
+    margin-top: 10px; 
+}
+
+.newOptionInput {
+    width: 120px;
+    padding: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
