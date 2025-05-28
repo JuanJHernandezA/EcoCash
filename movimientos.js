@@ -1,30 +1,28 @@
-let opciones = ["Ahorro", "Gastos Fijos", "Entretenimiento", "Inversiones"]; 
+const { Client } = require('pg');
 
-function cargarOpciones() {
-            
-            const select = document.getElementById("selectOpciones");
-            select.innerHTML = '<option value="" disabled selected>Elige una opción</option>';
+const client = new Client({
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    user: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
-            opciones.forEach(opcion => {
-                let nuevaOpcion = document.createElement("option");
-                nuevaOpcion.value = opcion;
-                nuevaOpcion.textContent = opcion;
-                select.appendChild(nuevaOpcion);
-            });
-        }
+async function connectDB() {
+    try {
+        await client.connect();
+        console.log('Connected to NeonDB PostgreSQL!');
+        // Prueba mostrando las variables de entorno
+        console.log('Host:', process.env.PGHOST);
+        console.log('Database:', process.env.PGDATABASE);
+        console.log('User:', process.env.PGUSER);
+    } catch (err) {
+        console.error('Connection error', err.stack);
+    }
+}
 
-function mostrarNuevaOpcion() {
-            document.getElementById("newOptionContainer").style.display = "block";
-        }
+connectDB();
 
-        function agregarNuevaOpcion() {
-            let nuevaOpcion = document.getElementById("newOptionInput").value.trim();
-            if (nuevaOpcion && !opciones.includes(nuevaOpcion)) {
-                opciones.push(nuevaOpcion);
-                cargarOpciones();  
-                document.getElementById("newOptionInput").value = "";
-                document.getElementById("newOptionContainer").style.display = "none";
-            }
-        }
-
-cargarOpciones();
+module.exports = client;

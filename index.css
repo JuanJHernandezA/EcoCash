@@ -2,10 +2,14 @@ header{
     background-color: #2d3c67;
     padding: 30px;
     display: flex;
+    position: fixed ;
+    top: 0;
     justify-content: space-between;
-    align-items: center;
     font-size: 24px;
     color: #f6f6f6;
+    width: 100%;
+    box-sizing: border-box;
+    
 }
 body{
     margin: 0;
@@ -13,14 +17,20 @@ body{
     background-color: #a7b2e6;
     
 }
-
+.all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 .container{
     background-color: #688cca;
-    padding: 20px;
+    padding: 5px;
     border-radius: 8px;
     max-width: auto;
-    width: 80%;
+    width: 40%;
     margin: 20px auto;
+    
 
 }
 
@@ -35,16 +45,16 @@ body{
 }
 h1{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 p{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 #ingresoForm label, #egresoForm label{
     align-self: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 #ingresoForm input[type="number"],
@@ -55,18 +65,18 @@ p{
 #egresoForm input[type="date"]
 {
     width: 100%;
-    padding: 8px;
+    padding: 4px;
     box-sizing: border-box;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 #ingresoForm select,
 #egresoForm select {
     width: 85%;
-    padding: 8px;
+    padding: 4px;
     box-sizing: border-box;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 #categoriaContainer{
@@ -77,15 +87,16 @@ p{
 
 #ingresoForm button[type="submit"],
 #egresoForm button[type="submit"] {
-    margin-top: 12px;
-    padding: 14px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
     width: 100%;
     font-size: 1.1rem;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 90px;
-    width: 80%;
+    width: 60%;
     cursor: pointer;
 }
 
