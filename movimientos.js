@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+const { Client } from 'pg';
 
 const client = new Client({
     host: process.env.PGHOST,
