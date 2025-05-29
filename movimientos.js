@@ -1,4 +1,4 @@
-import { Client } from 'pg';
+const { Client } = require('pg');
 
 const client = new Client({
     host: process.env.PGHOST,
@@ -25,4 +25,4 @@ async function connectDB() {
 
 connectDB();
 
-export default client;
+module.exports = client;
