@@ -1,4 +1,6 @@
-const { Client } from 'pg';
+
+import { Client } from 'pg';
+
 
 const client = new Client({
     host: process.env.PGHOST,
@@ -25,4 +27,5 @@ async function connectDB() {
 
 connectDB();
 
-module.exports = client;
+
+export default client;
