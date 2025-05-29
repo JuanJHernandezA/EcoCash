@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "builds": [{ "src": "movimientos.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "movimientos.js" }]
+}
