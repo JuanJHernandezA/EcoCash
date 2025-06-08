@@ -1,0 +1,7 @@
+2,Egreso,-1300001,Servicios,Servicios,2025-07-12
+3,Ingreso,773001,Servicios,Servicios,2025-07-12
+3,Egreso,-1001,Comida,Comida,2025-07-124,Ingreso,100000,com,Comida,5000-02-10
+
+
+4,Egreso,-10000,com,Comida,2025-06-08
+

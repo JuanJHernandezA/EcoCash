@@ -1,0 +1,12 @@
+{
+  "name": "control-finanzas",
+  "version": "1.0.0",
+  "description": "Aplicación para control de ingresos y egresos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 
