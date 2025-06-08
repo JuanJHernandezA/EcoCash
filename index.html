@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    
+    <title>EcoCash</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            EcoCash
+    <nav>
+        <div class="nav-container">
+            <h1><i class="fas fa-wallet"></i> EcoCash</h1>
+            <ul>
+                <li><a href="#" onclick="cargarPagina('dashboard')"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#" onclick="cargarPagina('movimientos')"><i class="fas fa-exchange-alt"></i> Movimientos</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div>
+    <main id="contenido">
+        <!-- El contenido se cargará dinámicamente aquí -->
+    </main>
 
-             <a href="#" onclick="cambiarPagina('home.html')">Inicio</a>
-             <a href="#" onclick="cambiarPagina('ingreso.html')">Ingresos</a>
-             <a href="#" onclick="cambiarPagina('egreso.html')">Egresoss</a>
-        </div>
-    </header>
-    
-    <br><br>
-    <div id="contenido"></div>
-    <script src="movimientos.js"></script>
-    <script src="index.js"></script>
-    
+    <script src="app.js"></script>
 </body>
-</html>
+</html> 
